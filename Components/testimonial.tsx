@@ -30,7 +30,7 @@ export default function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-          <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-[var(--primaryDarkGreen)] mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
             Don't just take our word for it. Here's what our clients have to say about working with us.
           </p>
@@ -43,7 +43,7 @@ export default function Testimonials() {
               className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative"
             >
               <div className="absolute top-0 left-0 transform -translate-y-1/2 translate-x-6">
-                <div className="bg-primary rounded-full p-2 shadow-lg">
+                <div className="bg-[var(--primaryDarkGreen)] rounded-full p-2 shadow-lg">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

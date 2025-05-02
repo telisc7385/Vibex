@@ -48,7 +48,7 @@ export default function Portfolio() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
-          <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-[var(--primaryDarkGreen)] mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
             Take a look at some of our recent projects that showcase our expertise and creativity.
           </p>
@@ -68,7 +68,7 @@ export default function Portfolio() {
                   height={400}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-[var(--primaryDarkGreen)]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Link
                     href="#"
                     className="px-4 py-2 bg-white text-primary rounded-md font-medium hover:bg-gray-100 transition-colors"
@@ -93,7 +93,7 @@ export default function Portfolio() {
               e.preventDefault()
               document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
             }}
-            className="px-6 py-3 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors inline-block"
+            className="px-6 py-3 rounded-md bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors inline-block"
           >
             Discuss Your Project
           </Link>

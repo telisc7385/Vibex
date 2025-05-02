@@ -8,11 +8,10 @@ import { Menu, X } from "lucide-react"
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "Services", href: "#services" },
-  { name: "Technologies", href: "#technologies" },
+  { name: "Process", href: "#process" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Contact", href: "#contact" },
 ]
 
 export default function Navbar() {
@@ -46,17 +45,17 @@ export default function Navbar() {
         isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm dark:bg-gray-900/90" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-0">
         <div className="flex items-center justify-between">
           <Link href="#home" className="flex items-center space-x-2">
             <Image
-              src="/placeholder.svg?height=40&width=40"
+              src="/homelogo.png"
               alt="DevCraft Logo"
-              width={40}
-              height={40}
+              width={200}
+              height={150}
               className="rounded"
             />
-            <span className="text-xl font-bold text-primary">DevCraft</span>
+            {/* <span className="text-xl font-bold text-primary">DevCraft</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -80,9 +79,9 @@ export default function Navbar() {
                 e.preventDefault()
                 scrollToSection("#contact")
               }}
-              className="px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors"
+              className="px-4 py-2 rounded-md bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors"
             >
-              Hire Us
+              Contact Us
             </Link>
           </nav>
 
@@ -119,9 +118,9 @@ export default function Navbar() {
                   e.preventDefault()
                   scrollToSection("#contact")
                 }}
-                className="px-4 py-2 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors text-center"
+                className="px-6 py-3 rounded-sm bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors text-center"
               >
-                Hire Us
+                Contact Us
               </Link>
             </div>
           </nav>

@@ -42,7 +42,7 @@ export default function WorkProcess() {
       <section id="process" className="py-20 bg-gray-50 dark:bg-gray-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <div className="inline-block px-3 py-1 rounded-full bg-[var(--primaryDarkGreen)]/10 text-primary text-sm font-medium mb-4">
               Our Process
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How We Work</h2>
@@ -62,7 +62,7 @@ export default function WorkProcess() {
                   <div className="flex items-center">
                     {/* Timeline dot */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                      <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
+                      <div className="w-8 h-8 rounded-full bg-[var(--primaryDarkGreen)] flex items-center justify-center text-white">
                         {index + 1}
                       </div>
                     </div>

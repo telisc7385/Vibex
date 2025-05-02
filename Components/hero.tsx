@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex-1 space-y-6">
-            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+            <div className="inline-block px-3 py-1 rounded-full bg-[var(--primaryDarkGreen)]/10 text-primary text-sm font-medium">
               Professional Web Development Services
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -26,7 +26,7 @@ export default function Hero() {
                   e.preventDefault()
                   document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
                 }}
-                className="px-6 py-3 rounded-md bg-primary text-white hover:bg-primary/90 transition-colors text-center"
+                className="px-6 py-3 rounded-md bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors text-center"
               >
                 Get a Free Quote
               </Link>
@@ -44,7 +44,7 @@ export default function Hero() {
           </div>
           <div className="flex-1 relative">
             <Image
-              src="/placeholder.svg?height=500&width=600"
+              src="/softwareimage.webp"
               alt="Web Development"
               width={600}
               height={500}
@@ -59,14 +59,14 @@ export default function Hero() {
             </div>
             <div className="absolute -top-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
               <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <div className="w-3 h-3 bg-[var(--primaryDarkGreen)] rounded-full"></div>
                 <span className="text-sm font-medium">Fast Turnaround Time</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-20 pt-10 border-t border-gray-200 dark:border-gray-800">
+        {/* <div className="mt-20 pt-10 border-t border-gray-200 dark:border-gray-800">
           <h3 className="text-center text-gray-500 dark:text-gray-400 mb-8">Trusted by businesses worldwide</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {[1, 2, 3, 4, 5].map((i) => (
@@ -80,7 +80,7 @@ export default function Hero() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

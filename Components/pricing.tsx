@@ -61,7 +61,7 @@ export default function Pricing() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Pricing Plans</h2>
-          <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
+          <div className="h-1 w-20 bg-[var(--primaryDarkGreen)] mx-auto mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300">
             Transparent pricing with no hidden fees. Choose the plan that works best for your business needs.
           </p>
@@ -76,7 +76,7 @@ export default function Pricing() {
               }`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                <div className="absolute top-0 right-0 bg-[var(--primaryDarkGreen)] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
                   Most Popular
                 </div>
               )}
@@ -103,7 +103,7 @@ export default function Pricing() {
                   }}
                   className={`w-full block text-center py-3 rounded-md transition-colors ${
                     plan.popular
-                      ? "bg-primary text-white hover:bg-primary/90"
+                      ? "bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90"
                       : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
                   }`}
                 >
