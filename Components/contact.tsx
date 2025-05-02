@@ -54,7 +54,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left side - Contact Info */}
           <div>
-            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            <div className="inline-block px-3 py-1 rounded-full bg-[var(--primaryDarkGreen)]/10 text-primary text-sm font-medium mb-4">
               Contact Us
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Discuss Your Project</h2>
@@ -65,7 +65,7 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-10 h-10 rounded-full bg-[var(--primaryDarkGreen)]/10 flex items-center justify-center mr-4">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -77,7 +77,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-10 h-10 rounded-full bg-[var(--primaryDarkGreen)]/10 flex items-center justify-center mr-4">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <div className="w-10 h-10 rounded-full bg-[var(--primaryDarkGreen)]/10 flex items-center justify-center mr-4">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -229,7 +229,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors disabled:opacity-70"
+                  className="w-full py-3 bg-[var(--primaryDarkGreen)] text-white rounded-md hover:bg-[var(--primaryDarkGreen)]/90 transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>

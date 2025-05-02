@@ -44,7 +44,7 @@ export default function Services() {
     <section id="services" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-[var(--primaryDarkGreen)]/10 text-primary text-sm font-medium mb-4">
             Our Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Expert Solutions For Your Digital Needs</h2>

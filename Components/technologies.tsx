@@ -47,7 +47,7 @@ const technologies = [
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Tech Stack</h2>
-            <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
+            <div className="h-1 w-20 bg-[var(--primaryDarkGreen)] mx-auto mb-6"></div>
             <p className="text-gray-600 dark:text-gray-300">
               We use cutting-edge technologies to build fast, scalable, and maintainable applications that meet your
               business needs.
@@ -63,7 +63,7 @@ const technologies = [
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-3">
                   <div
-                    className="bg-primary h-2.5 rounded-full transition-all duration-500 ease-out"
+                    className="bg-[var(--primaryDarkGreen)] h-2.5 rounded-full transition-all duration-500 ease-out"
                     style={{ width: `${tech.level}%` }}
                   ></div>
                 </div>
