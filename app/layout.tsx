@@ -19,13 +19,24 @@ export const metadata: Metadata = {
     description: "Custom web and mobile solutions using React, Flutter, WordPress, and Shopify. Built by experienced freelance developers.",
     url: "https://vibex-mu.vercel.app/",
     siteName: "Vibex DevDuo",
+    images: [
+      {
+        url: "https://vibex-mu.vercel.app/WebLogoBlack.png", // Full URL to the image
+        width: 1200,
+        height: 630,
+        alt: "Vibex DevDuo Logo",
+      },
+    ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Web & App Development Services | Vibex DevDuo",
     description: "Expert solutions in web and mobile development using modern technologies like React, Flutter, and Shopify.",
+    images: ["https://vibex-mu.vercel.app/WebLogoBlack.png"], // Full URL again
   },
 };
+
 
 
 export default function RootLayout({
@@ -36,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-         className={jost.className} suppressHydrationWarning
+        className={jost.className} suppressHydrationWarning
       >
         {children}
       </body>
