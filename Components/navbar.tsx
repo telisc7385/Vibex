@@ -7,11 +7,10 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { name: "Home", href: "#home" },
+  { name: "Expertise", href: "#whatwedo" }, 
   { name: "Services", href: "#services" },
-  { name: "Process", href: "#process" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Pricing", href: "#pricing" },
+  { name: "About Us", href: "#about" },
+  { name: "Workflow", href: "#workprocess" },
 ]
 
 export default function Navbar() {
@@ -45,17 +44,16 @@ export default function Navbar() {
         isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm dark:bg-gray-900/90" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 py-0">
-        <div className="flex items-center justify-between">
-          <Link href="#home" className="flex items-center space-x-2">
+      <div className="container mx-auto px-4 py-0 ">
+        <div className="flex items-center justify-between py-2">
+          <Link href="#home" className="flex items-center space-x-2 py-2 sm:w-[100px] w-[60px] sm:h-[80px] h-[50px] relative">
             <Image
-              src="/homelogo.png"
+              src={`${isScrolled ? '/WebLogoBlack.png' : '/WebLogoWhite.png'}`}
               alt="DevCraft Logo"
-              width={200}
-              height={150}
+              fill
               className="rounded"
             />
-            {/* <span className="text-xl font-bold text-primary">DevCraft</span> */}
+            {/* <span className="text-xl font-bold text-[var(--primaryDarkGreen)]">DevCraft</span> */}
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,7 +66,7 @@ export default function Navbar() {
                   e.preventDefault()
                   scrollToSection(link.href)
                 }}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary"
+                className={`text-xl font-medium  ${isScrolled ? "text-gray-700 hover:text-[var(--primaryDarkGreen)]" : "text-white"}`}
               >
                 {link.name}
               </Link>
@@ -79,7 +77,7 @@ export default function Navbar() {
                 e.preventDefault()
                 scrollToSection("#contact")
               }}
-              className="px-4 py-2 rounded-md bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors"
+              className="px-8 py-3 text-lg rounded-md bg-[var(--primaryDarkGreen)] border border-white text-white hover:bg-white hover:text-[var(--primaryDarkGreen)]"
             >
               Contact Us
             </Link>
@@ -87,11 +85,11 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 dark:text-gray-200"
+            className={`md:hidden ${isScrolled ? 'text-gray-700' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
         </div>
 
@@ -107,7 +105,7 @@ export default function Navbar() {
                     e.preventDefault()
                     scrollToSection(link.href)
                   }}
-                  className="text-sm font-medium text-gray-700 hover:text-primary transition-colors dark:text-gray-200 dark:hover:text-primary"
+                  className="text-lg font-medium text-gray-700 hover:text-[var(--primaryDarkGreen)] transition-colors dark:text-gray-200 dark:hover:text-[var(--primaryDarkGreen)]"
                 >
                   {link.name}
                 </Link>
@@ -118,7 +116,7 @@ export default function Navbar() {
                   e.preventDefault()
                   scrollToSection("#contact")
                 }}
-                className="px-6 py-3 rounded-sm bg-[var(--primaryDarkGreen)] text-white hover:bg-[var(--primaryDarkGreen)]/90 transition-colors text-center"
+                className="px-6 py-3 rounded-sm bg-[var(--primaryDarkGreen)] text-white hover:bg-white text-center"
               >
                 Contact Us
               </Link>

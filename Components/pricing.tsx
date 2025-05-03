@@ -90,7 +90,7 @@ export default function Pricing() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
-                      <Check className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-[var(--primaryDarkGreen)] mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-gray-600 dark:text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -123,7 +123,7 @@ export default function Pricing() {
                 e.preventDefault()
                 document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
               }}
-              className="text-primary hover:underline"
+              className="text-[var(--primaryDarkGreen)] hover:underline"
             >
               Contact us
             </Link>{" "}

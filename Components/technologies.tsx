@@ -59,7 +59,7 @@ const technologies = [
               <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-lg font-semibold">{tech.name}</h3>
-                  <span className="text-sm font-medium text-primary">{tech.level}%</span>
+                  <span className="text-sm font-medium text-[var(--primaryDarkGreen)]">{tech.level}%</span>
                 </div>
                 <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-3">
                   <div
