@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
+  const popupRef = useRef<HTMLDivElement>(null)
 
   const contacts = [
     {
@@ -24,10 +25,30 @@ export default function WhatsAppButton() {
     return `https://api.whatsapp.com/send?phone=${number}&text=${message}`
   }
 
+  // 🧠 Detect outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen])
+
   return (
     <div className="fixed bottom-28 right-6 z-50">
       {isOpen && (
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg p-4 mt-2 w-64">
+        <div
+          ref={popupRef}
+          className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md shadow-lg p-4 mt-2 w-64"
+        >
           <h4 className="text-lg font-semibold mb-3 text-gray-800 dark:text-white">Contact via WhatsApp</h4>
           <ul className="space-y-2">
             {contacts.map((contact) => (
@@ -62,9 +83,7 @@ export default function WhatsAppButton() {
             className="h-9 w-9 lg:h-12 lg:w-12"
           />
         </button>
-        </div>
-
-
       </div>
-      )
+    </div>
+  )
 }

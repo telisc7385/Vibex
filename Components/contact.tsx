@@ -5,6 +5,7 @@ import { useState } from "react"
 import { Mail, Phone, MapPin, Instagram } from "lucide-react"
 import Label from "./CommonComponent.tsx/Label"
 import Link from "next/link"
+import { googleEvent } from "@/app/gtag"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -54,6 +55,13 @@ export default function Contact() {
       })
 
       if (response.ok) {
+        if (typeof window !== 'undefined') {
+          googleEvent('contact_form_submission', {
+            event_category: 'Contact',
+            event_label: 'Contact Form',
+            value: 1,
+          });
+        }
         setSubmitSuccess(true)
         setFormData({
           Name: "",
