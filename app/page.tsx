@@ -1,12 +1,11 @@
+import About from "@/Components/about";
+import WhatsAppButton from "@/Components/CommonComponent.tsx/WhatsappIntegration";
 import Contact from "@/Components/contact";
 import Footer from "@/Components/footer";
 import Hero from "@/Components/hero";
 import Navbar from "@/Components/navbar";
-import Portfolio from "@/Components/portfolio";
-import Pricing from "@/Components/pricing";
 import Services from "@/Components/services";
-import Technologies from "@/Components/technologies";
-import Testimonials from "@/Components/testimonial";
+import WhatWeDo from "@/Components/whatWeDo";
 import WorkProcess from "@/Components/work-process";
 
 
@@ -15,13 +14,17 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
+      <WhatWeDo />
       <Services />
+      
       {/* <Technologies /> */}
+      <About />
       <WorkProcess />
       {/* <Portfolio /> */}
-      <Testimonials />
-      <Pricing />
+      {/* <Testimonials />
+      <Pricing /> */}
       <Contact />
+      <WhatsAppButton />
       <Footer />
     </main>
   )

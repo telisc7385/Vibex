@@ -71,14 +71,14 @@ export default function Portfolio() {
                 <div className="absolute inset-0 bg-[var(--primaryDarkGreen)]/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <Link
                     href="#"
-                    className="px-4 py-2 bg-white text-primary rounded-md font-medium hover:bg-gray-100 transition-colors"
+                    className="px-4 py-2 bg-white text-[var(--primaryDarkGreen)] rounded-md font-medium hover:bg-gray-100 transition-colors"
                   >
                     View Project
                   </Link>
                 </div>
               </div>
               <div className="p-6">
-                <div className="text-sm text-primary font-medium mb-2">{project.category}</div>
+                <div className="text-sm text-[var(--primaryDarkGreen)] font-medium mb-2">{project.category}</div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
               </div>
