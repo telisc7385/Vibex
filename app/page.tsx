@@ -11,11 +11,13 @@ import WorkProcess from "@/Components/work-process"
 import Portfolio from "@/Components/portfolio"
 import Pricing from "@/Components/pricing"
 import Testimonials from '@/Components/testimonial'
-import { getsectionApi } from '@/apiCall/getSection'
+import { getsectionWitSpreadSheetApi } from '@/apiCall/getSection'
 
 export default async function Home() {
-  const response = await getsectionApi()
+  const response = await getsectionWitSpreadSheetApi()
   const config = response.params
+
+  console.log("response",response)
 
   if (!config) return <p className="text-center mt-10">Loading...</p>
 
