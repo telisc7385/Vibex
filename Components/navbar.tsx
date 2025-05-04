@@ -7,9 +7,9 @@ import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { name: "Home", href: "#home" },
-  { name: "Expertise", href: "#whatwedo" }, 
+  { name: "Expertise", href: "#whatwedo" },
   { name: "Services", href: "#services" },
-  { name: "About Us", href: "#about" },
+  // { name: "About Us", href: "#about" },
   { name: "Workflow", href: "#workprocess" },
 ]
 
@@ -40,13 +40,17 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm dark:bg-gray-900/90" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 shadow-md backdrop-blur-sm dark:bg-gray-900/90" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 py-0 ">
         <div className="flex items-center justify-between py-2">
-          <Link href="#home" className="flex items-center space-x-2 py-2 sm:w-[100px] w-[60px] sm:h-[80px] h-[50px] relative">
+          <Link
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('#home');
+            }}
+            href="#home" className="flex items-center space-x-2 py-2 sm:w-[100px] w-[60px] sm:h-[80px] h-[50px] relative">
             <Image
               src={`${isScrolled ? '/WebLogoBlack.png' : '/WebLogoWhite.png'}`}
               alt="DevCraft Logo"

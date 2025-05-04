@@ -1,0 +1,17 @@
+{
+  "jsonrpc": "2.0",
+  "params": {
+    "showNavbar": true,
+    "showHero": true,
+    "showWhatWeDo": true,
+    "showServices": true,
+    "showWorkProcess": true,
+    "showAbout": false,
+    "showPortfolio": false,
+    "showTestimonials": false,
+    "showPricing": false,
+    "showContact": true,
+    "showWhatsApp": true,
+    "showFooter": true
+  }
+}

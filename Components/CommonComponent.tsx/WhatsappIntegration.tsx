@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
+import { Instagram } from 'lucide-react'
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
@@ -65,6 +66,18 @@ export default function WhatsAppButton() {
               </li>
             ))}
           </ul>
+          <div className="pt-3 border-t border-gray-300 dark:border-gray-600 mt-3">
+            <a
+              href="https://www.instagram.com/vibex_technologies?igsh=cWJncWx6aGQzbmxj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-pink-100 dark:hover:bg-pink-900/30 text-gray-800 dark:text-white"
+            >
+              <Instagram />
+              <span className="font-medium">Message us on Instagram</span>
+            </a>
+          </div>
+
         </div>
       )}
 
