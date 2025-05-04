@@ -1,10 +1,10 @@
-import { getsectionApi } from '@/apiCall/getSection'
+import { getsectionWitSpreadSheetApi } from '@/apiCall/getSection'
 import AdminAccessPage from '@/Components/AdminComponents/AdminAcessPage'
 import React from 'react'
 
 const page = async () => {
 
-  const response = await getsectionApi();
+  const response = await getsectionWitSpreadSheetApi();
 
   return (
 

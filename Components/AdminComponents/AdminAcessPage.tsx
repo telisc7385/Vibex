@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
 type Props = {
-    sectionResponse: SectionConfig;
+    sectionResponse: any;
 }
 
 export default function AdminAccessPage({ sectionResponse }: Props) {
