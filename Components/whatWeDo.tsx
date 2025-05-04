@@ -33,12 +33,12 @@ const WhatWeDo = () => {
 
                     {/* Vision & Mission Boxes */}
                     <div className="grid sm:grid-cols-2 gap-6 mb-10">
-                        <div className="bg-gray-50 p-6 rounded-lg sm:text-start text-center">
+                        <div className="bg-gray-50 p-6 rounded-lg sm:text-start text-center shadow-md">
                             <div className="text-purple-600 mb-3 text-3xl">👁️</div>
                             <h5 className="font-medium text-2xl mb-2">Our Vision</h5>
                             <p className="text-gray-500 text-base">To create innovative, user-first digital products that solve real-world problems.</p>
                         </div>
-                        <div className="bg-gray-50 p-6 rounded-lg sm:text-start text-center">
+                        <div className="bg-gray-50 p-6 rounded-lg sm:text-start text-center shadow-md">
                             <div className="text-purple-600 mb-3 text-3xl">🎯</div>
                             <h5 className="font-medium text-2xl mb-2">Our Mission</h5>
                             <p className="text-gray-500 text-base">Deliver high-quality web and app solutions with measurable impact for clients worldwide.</p>

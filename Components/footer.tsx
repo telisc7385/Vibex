@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link"
 import Image from "next/image"
 import { Heart, Instagram } from "lucide-react"
@@ -5,12 +6,31 @@ import { Heart, Instagram } from "lucide-react"
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Expertise", href: "#whatwedo" },
+    { name: "Services", href: "#services" },
+    // { name: "About Us", href: "#about" },
+    { name: "Workflow", href: "#workprocess" },
+    { name: "Contact Us", href: "#contact" }
+  ]
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <footer className="bg-[var(--primaryDarkGreen)] text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 sm:gap-8 gap-2">
           <div className="md:col-span-1 flex justify-center">
-            <Link href="#home" className="flex items-center space-x-2 mb-4 sm:h-[180px] h-[150px] sm:w-[220px] w-[180px] relative ">
+            <Link onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('#home');
+            }} href="#home" className="flex items-center space-x-2 mb-4 sm:h-[180px] h-[150px] sm:w-[220px] w-[180px] relative ">
               <Image
                 src="/WebLogoWhite.png"
                 alt="DevCraft Logo"
@@ -55,32 +75,21 @@ export default function Footer() {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="#home" className="text-white transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#services" className="text-white transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#portfolio" className="text-white transition-colors">
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#testimonials" className="text-white transition-colors">
-                    Testimonials
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="text-white transition-colors">
-                    Contact
-                  </Link>
-                </li>
+                {navLinks.map((link) => (
+                  <li
+                    key={link.name}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.href);
+                    }}
+                    className="cursor-pointer text-white transition-colors"
+                  >
+                    {link.name}
+                  </li>
+                ))}
               </ul>
+
+
             </div>
           </div>
 
@@ -88,15 +97,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-white">
               <li className="">
-                <a href="mailto:telisuchit7385@gmail.com" className="text-white">
+                {/* <a href="mailto:telisuchit7385@gmail.com" className="text-white">
                   telisuchit7385@gmail.com
+                </a> */}
+                <a href="mailto:vibextech15@gmail.com" className="text-white">
+                  vibextech15@gmail.com
                 </a>
               </li>
-              <li className="">
+              {/* <li className="">
                 <a href="mailto:adarshsalgudi17@gmail.com" className="text-white">
                   adarshsalgudi17@gmail.com
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="tel:+7385347208" className="text-white">
                   +91 7385347208
@@ -110,7 +122,7 @@ export default function Footer() {
 
               <li className="flex space-x-4">
                 <a
-                  href={'https://www.instagram.com/vibex_tech?igsh=MXR4eWl4c3ZxeWljcw=='}
+                  href={'https://www.instagram.com/vibex_technologies?igsh=cWJncWx6aGQzbmxj'}
                   className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[var(--primaryDarkGreen)] transition-colors"
                 >
                   <span className="capitalize"> <Instagram /></span>

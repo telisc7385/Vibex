@@ -42,16 +42,16 @@ export default function Contact() {
     setIsSubmitting(true)
     setSubmitError("")
 
-    const form = e.currentTarget
-    const data = new FormData(form)
-
     try {
-      const response = await fetch("https://usebasin.com/f/037337fe77c7", {
+      const response = await fetch("https://sheetdb.io/api/v1/26d7bwczbvrpn", {
         method: "POST",
         headers: {
-          Accept: "application/json",
+          "Accept": "application/json",
+          "Content-Type": "application/json",
         },
-        body: data,
+        body: JSON.stringify({
+          data: [formData],
+        }),
       })
 
       if (response.ok) {
@@ -60,7 +60,7 @@ export default function Contact() {
             event_category: 'Contact',
             event_label: 'Contact Form',
             value: 1,
-          });
+          })
         }
         setSubmitSuccess(true)
         setFormData({
@@ -79,6 +79,7 @@ export default function Contact() {
       setIsSubmitting(false)
     }
   }
+
 
 
   return (
@@ -103,11 +104,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium mb-1">Email Us</h4>
-                  <a href="mailto:telisuchit7385@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-[var(--primaryDarkGreen)]">
+                  {/* <a href="mailto:telisuchit7385@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-[var(--primaryDarkGreen)]">
                     telisuchit7385@gmail.com
                   </a> <br />
                   <a href="mailto:adarshsalgudi17@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-[var(--primaryDarkGreen)]">
                     adarshsalgudi17@gmail.com
+                  </a> */}
+                  <a href="mailto:vibextech15@gmail.com" className="text-gray-600 dark:text-gray-300 hover:text-[var(--primaryDarkGreen)]">
+                    vibextech15@gmail.com
                   </a>
                 </div>
               </div>
@@ -191,9 +195,9 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-4 text-gray-400 bg-white rounded-md focus:ring-2 focus:ring-[var(--primaryDarkGreen)] focus:border-transparent dark:bg-gray-700 dark:text-white"
+                    className="w-full px-4 py-4 text-black bg-white rounded-md focus:ring-2 focus:ring-[var(--primaryDarkGreen)] focus:border-transparent dark:bg-gray-700 dark:text-white"
                   >
-                    <option value="" disabled hidden>
+                    <option value="" disabled hidden className="text-gray-400">
                       Select a service
                     </option>
                     {serviceTitles.map((title) => (
